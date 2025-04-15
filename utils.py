@@ -23,7 +23,7 @@ def format_games_message(games_data):
         
         # Format game time
         if "FINAL" not in game_time:
-            game_time = datetime.strptime(game_time, '%H:%M')
+            game_time = datetime.strptime(game_time, '%H:%M').strftime('%H:%M')
 
         gamecard = f"\n🏀 *{home_team} vs {away_team}*"
         if home_team_score and away_team_score:
