@@ -1,13 +1,21 @@
 from datetime import datetime
 
+# Dicionário de meses em português
+MESES_PT = {
+    1: "Janeiro", 2: "Fevereiro", 3: "Março", 4: "Abril",
+    5: "Maio", 6: "Junho", 7: "Julho", 8: "Agosto",
+    9: "Setembro", 10: "Outubro", 11: "Novembro", 12: "Dezembro"
+}
+
 def format_games_message(games_data):
     if not games_data:
         return "Não há jogos marcados para essa data."
+
+    # Extrair data do primeiro jogo
+    game_date = games_data[0][1]
+    formatted_date = f"{game_date.day} de {MESES_PT[game_date.month].capitalize()} de {game_date.year}"
     
-    # Extract date from first game (assuming all same date)
-    game_date = games_data[0][1].strftime('%B %d, %Y')
-    
-    message = [f"🗓 *Jogos em {game_date}* 🗓\n"]
+    message = [f"🗓 *Jogos em {formatted_date}* 🗓\n"]
     
     for game in games_data:
         (_, _, game_time, broadcaster, home_team, away_team, 
