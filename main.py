@@ -4,7 +4,7 @@ from utils import format_games_message
 from datetime import datetime
 from config.settings import TELEGRAM_BOT_TOKEN
 
-async def games(update, context):
+async def jogos(update, context):
     # Get date from command arguments or use today
     try:
         date = datetime.strptime(context.args[0], '%Y-%m-%d').date()
@@ -18,7 +18,7 @@ async def games(update, context):
 def main():
     print("Starting bot...")
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
-    application.add_handler(CommandHandler('games', games))
+    application.add_handler(CommandHandler('jogos', jogos))
     print("Bot initialized, starting polling...")
     application.run_polling()
     print("Polling started")
