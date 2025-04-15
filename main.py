@@ -27,14 +27,15 @@ def parse_date(args):
 
 async def start(update, context):
     message = (
-        "👋 Olá! Eu sou o bot dos jogos!\n\n"
-        "Você pode usar os seguintes comandos:\n"
-        "• `/jogos` — mostra os jogos de hoje\n"
-        "• `/jogos hoje` — também mostra os jogos de hoje\n"
-        "• `/jogos ontem` — mostra os jogos de ontem\n"
-        "• `/jogos amanha` — mostra os jogos de amanhã\n"
-        "• `/jogos YYYY-MM-DD` — mostra os jogos de uma data específica\n\n"
-        "📅 Obs: só tenho dados até amanhã."
+        "🏀 Olá! Eu sou o *Bot da NBA* e estou aqui pra te mostrar os jogos da liga! 🇺🇸🔥\n\n"
+        "Você pode usar os seguintes comandos:\n\n"
+        "• `/jogos` — mostra os jogos de *hoje*\n"
+        "• `/jogos hoje` — também mostra os jogos de *hoje*\n"
+        "• `/jogos ontem` — jogos de *ontem*\n"
+        "• `/jogos amanha` — jogos de *amanhã*\n"
+        "• `/jogos YYYY-MM-DD` — jogos de uma *data específica* (ex: `/jogos 2025-04-15`)\n\n"
+        "📌 *Importante:* o bot só mostra jogos até *amanhã*. Datas futuras ainda não estão disponíveis.\n\n"
+        "Fique à vontade para explorar e acompanhar os confrontos da temporada! 🏆"
     )
     await update.message.reply_text(message, parse_mode='Markdown')
 
