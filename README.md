@@ -48,4 +48,4 @@ O bot responde:
 
 ## 🔗 Acesse o bot:
 
-👉 [https://t.me/jogos_nba_bot](https://t.me/jogos_nba_bot) ← substitua com o link real
+👉 [https://t.me/jogos_nba_bot](https://t.me/jogos_nba_bot)
